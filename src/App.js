@@ -13,25 +13,7 @@ const winningOptions = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-const phraseArray=[
-  'წადით წადით დაიძინეთ...',
-  'არ გცოდნიათ ბიძია-ბაბუა თქვენ თამაში',
-  'მასაჟი თუ მასაზი?',
-  'ნიჩიაა...',
-  'ანდრია რამე ხო არ გეშლება?',
-  'ალაქაჩი და სოლოსოლო თქვენზე უკეთ თამაშობენ',
-  'ბავშვები თამანსობენ',
-  'მაღალი... მაღალი...',
-  'ესევ ჰალილო ათამაშო ჯობია ანდრი :)',
-  'გეყოთ ეხლა ამდენი თამაში ხო ხედავთ გარტყმაში არ ხართ',
-  'მორჩა კინო',
-  'აბა თქვენა ხართ რაა..',
-  'ჩემი კაი გავგიჟდი კომპიუტერი კაცი',
-  'ალიბაბა და 12 ყივჩაღი',
-  'ასტანა ვესტა ბეიბე',
-  'აიტ მიაფსი მამაშენს',
-  'ავათა ვარ ავათააა მოდი სანახავადაა, გავიბაგე ჩემი კაი...'
-]
+
 const options = [
   { value: "X", label: "X" },
   { value: "O", label: "O" },
@@ -150,11 +132,11 @@ function App() {
   function getWinnerStatus(gameWinner) {
     switch (winner.status) {
       case "x":
-        return gameWinner ? "X" : "Winner is Player - X ზედმეტსახელად ალაქაჩი";
+        return gameWinner ? "X" : "Winner is Player - X";
       case "o":
-        return gameWinner ? 'O' : "Winner is Player - O ზედმეტსახელად ჰალილო";
+        return gameWinner ? 'O' : "Winner is Player - O";
       default:
-        return phraseArray[Math.floor(Math.random() * phraseArray.length)];
+        return 'Draw'
     }
   }
 
