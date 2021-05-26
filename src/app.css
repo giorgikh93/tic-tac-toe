@@ -1,0 +1,189 @@
+.board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.board div {
+  width: 80px;
+  height: 100px;
+  border: 1px solid #851e3e;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body {
+  box-sizing: border-box;
+  background-color: #152d32;
+  
+}
+#board_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.x::before {
+  animation: fade .2s;
+color: #dfd4ff;
+  content: "X";
+  font-size: 80px;
+}
+.o::after {
+  animation: fade .2s;
+  color: #dbed45;
+
+  content: "0";
+  font-size: 80px;
+}
+
+.modal {
+  background-color: rgb(216, 221, 199);
+  box-shadow: 2px 3px 5px rgb(58, 58, 58);
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 40px;
+  left: 30%;
+  animation: fade 1s;
+}
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 15px;
+}
+button:hover{
+    background-color: #CAF1D1;
+    color: dodgerblue;
+}
+.btn{
+    width: 200px;
+    align-self: center;
+}
+@keyframes fade {
+  0% {
+    transform: scale(0);
+
+  }
+  100% {
+    transform: scale(1);
+
+  }
+}
+
+
+.dropdown-container{
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #851e3e;
+    cursor: pointer;
+
+    
+}
+.dropdown-child{
+    position: absolute;
+    width: 100%;
+    border-left: 1px solid #851e3e;
+    border-right: 1px solid #851e3e;
+    border-bottom: 1px solid #851e3e;
+    display: flex;
+    flex-direction: column;
+    left: -1px;
+    top: 39px;
+    background-color: white;
+    z-index: 10;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center
+}
+.dropdown-child span{
+    padding: 10px;
+    border-bottom: 1px solid #CAF1D1;
+    cursor: pointer;
+    transition: .3s;
+
+}
+.dropdown-child span:hover{
+    background-color: rgb(194, 194, 253);
+}
+.value{
+color: #f2f2f2;
+
+}
+.none{
+    display: none;
+}
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+      }
+      80% {
+        transform: scaleY(1.1)
+      }
+      100% {
+        transform: scaleY(1)
+      }
+}
+
+.green{
+    background-color: #00ff0a !important; 
+    box-shadow: 0 0 10px #00ff0a
+    0 0 20px #00ff0a
+    0 0 40px #00ff0a
+    0 0 60px #00ff0a
+    0 0 80px #00ff0a
+    0 0 100px #00ff0a
+
+   
+
+}
+.green::before{
+    color: white !important;
+  animation: option 1s linear infinite;
+
+}
+.green::after{
+    color: white !important;
+  animation: option 1s linear infinite;
+
+}
+@keyframes option {
+    0%{
+        transform: scale(1.2);
+    }
+    80%,100%{
+        transform: scale(0);
+    }
+}
+
+.gameWinner{
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+
+}
